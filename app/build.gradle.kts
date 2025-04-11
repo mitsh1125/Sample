@@ -1,5 +1,7 @@
 plugins {
     id("com.android.application")
+
+
 }
 
 android {
@@ -30,9 +32,24 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
+buildscript {
+    repositories {
+        google() // Firebase repositories
+        mavenCentral() // Make sure maven is included
+    }
+    dependencies {
+        // Add classpath for Firebase plugin
+        classpath ("com.google.gms:google-services:4.3.15")
+    }
+}
+
+
+
 
 dependencies {
 
+    implementation ("com.google.firebase:firebase-database:20.0.5")
+    implementation ("com.google.firebase:firebase-auth:23.2.1")
     implementation( "com.android.volley:volley:1.2.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")

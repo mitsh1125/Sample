@@ -1,47 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/login_background"
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/txt_uname"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/txt_pname"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG IN"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/baseline_account_circle_24"/>
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round_corner"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="18dp"
+            android:textColor="#00000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+        android:id="@+id/password_input"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="20dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:textStyle="bold"
+        android:textColor="#00000"
+        android:inputType="textPassword"
+        android:background="@drawable/round_corner"
+        android:padding="18dp"
+        android:layout_marginTop="32dp"/>
 
-    <EditText
-        android:id="@+id/txt_Ename"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_margin="20dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+
 
     <Button
-        android:id="@+id/txt_Sname"
+        android:id="@+id/login_btn"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="20dp"
         android:ems="10"
-        android:hint="SignUp"
-        android:text="Sign Up" />
+        android:hint="LOG IN"
+        android:text="LOG IN"
+        android:textColor="#3B84F1"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Or"/>
+
+        <Button
+            android:id="@+id/create_btn"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:text="CREATE ACCOUNT"/>
 
 </LinearLayout>
+
+
+</RelativeLayout>
